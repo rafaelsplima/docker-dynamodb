@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  dev:
+    container_name: dynamodb
+    image: amazon/dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - dynamodata:/home/dynamodblocal
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ."
+volumes:
+  dynamodata: {}
+
+  #version: Esta é a versão do docker-compose a ser usada. Versões mais recentes adicionam recursos aprimorados.
+  #services: O Docker pode iniciar vários containers (que vai dentro dos services)
+  #ports: Aqui estamos simplesmente mapeando a porta 8000 em nosso sistema host para a porta 8000 dentro do contêiner.
+  #volumes: Os volumes são criados e gerenciados pelo Docker. Estamos criando um volume chamado dynamodata e inicializando-o como um objeto vazio.
+  #command: Este é o comando que é executado quando iniciamos o container
+
