@@ -16,4 +16,3 @@ volumes:
   #ports: Aqui estamos simplesmente mapeando a porta 8000 em nosso sistema host para a porta 8000 dentro do contêiner.
   #volumes: Os volumes são criados e gerenciados pelo Docker. Estamos criando um volume chamado dynamodata e inicializando-o como um objeto vazio.
   #command: Este é o comando que é executado quando iniciamos o container
-
